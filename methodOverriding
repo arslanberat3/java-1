@@ -1,0 +1,50 @@
+public class Shape {
+   protected double calculateArea() {
+      return 0;
+   }
+}
+
+public class Circle extends Shape {
+   private double radius;
+
+   public Circle(double radius) {
+      this.radius = radius;
+   }
+
+   @Override
+   protected double calculateArea() {
+      return Math.PI * radius * radius;
+   }
+}
+
+public class Rectangle extends Shape {
+   private double length;
+   private double width;
+
+   public Rectangle(double length, double width) {
+      this.length = length;
+      this.width = width;
+   }
+
+   @Override
+   protected double calculateArea() {
+      return length * width;
+   }
+}
+		
+    
+    System.out.println("----------------------------------------------------------");
+
+
+
+
+public static void main(String[] args) {
+   Circle c = new Circle(5);
+   double circleArea = c.calculateArea();
+   System.out.println("Circle area: " + circleArea);
+
+   Rectangle r = new Rectangle(10, 5);
+   double rectangleArea = r.calculateArea();
+   System.out.println("Rectangle area: " + rectangleArea);
+}
+
